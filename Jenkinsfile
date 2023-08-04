@@ -9,7 +9,7 @@ pipeline {
       }
       stage('Docker Build') {
          steps {
-            pwsh(script: 'docker images ps ')
+            powershell (script: 'docker images ps ')
             pwsh(script: """
                cd azure-vote/
                docker images -a
